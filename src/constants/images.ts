@@ -1,9 +1,15 @@
 export const images = {
   mainLogo: {
-    src: "/images/logos/logo-shopmaze-main.png",
+    src: "/images/logos/logo-shopmaze-main.svg",
     alt: "logo",
-    width: 138,
-    height: 28,
+    width: 118,
+    height: 29,
+  },
+  mainLogoMobile: {
+    src: "/images/logos/logo-shopmaze-main-mobile.svg",
+    alt: "logo",
+    width: 90,
+    height: 22.12,
   },
   megaMenuSmartPhone: {
     src: "/images/mega-menu/image-smartphone.png",
@@ -77,5 +83,13 @@ export const images = {
     alt: "Gaming category",
     width: 100,
     height: 100,
+  },
+
+  // ProductCard Images
+  logoAmazonWhite: {
+    src: "/images/logos/logo-amazon-white.png",
+    alt: "Amazon",
+    width: 17,
+    height: 17,
   },
 };

@@ -1,5 +1,5 @@
 .navbar {
-  @apply py-4;
+  @apply hidden md:block py-4;
 
   &__container {
     @apply flex items-center justify-between gap-8;
