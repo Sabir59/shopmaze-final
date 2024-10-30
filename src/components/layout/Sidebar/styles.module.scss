@@ -1,0 +1,37 @@
+/* Positioning */
+/* Box Model */
+/* Display */
+/* Backgrounds & Borders */
+/* Text Styles */
+/* Effects & States */
+/* Overflow */
+/* Miscellaneous */
+
+.sidebar {
+  @apply absolute top-0 left-0 h-full w-full space-y-4 max-w-[232px] 
+      min-h-screen flex flex-col bg-slate-50 rounded-r-lg overflow-y-auto;
+  &__header {
+    @apply sticky top-0 border-b bg-slate-50;
+    &--content {
+      @apply h-[72px] flex items-center mx-4;
+    }
+  }
+  &__content {
+    @apply flex flex-col gap-5 flex-1 p-4 !m-0;
+  }
+  &__group {
+    @apply text-left;
+  }
+  &__footer {
+    @apply sticky bottom-4 bg-white m-4 rounded-md;
+    &--content {
+      @apply p-2;
+    }
+  }
+  &__heading {
+    @apply text-gray-600 text-xs font-medium;
+  }
+  &__list {
+    @apply pl-2;
+  }
+}

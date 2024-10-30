@@ -17,12 +17,9 @@ export const CategoryCard = ({ name, href, image }: CategoryCardProps) => {
   return (
     <div>
       {/* Image */}
-      <Link href={href} className="flex flex-col items-center gap-2">
+      <Link href={href} className="flex flex-col items-center gap-2 w-32 h-32">
         <div className="p-2 flex justify-center items-center rounded-lg bg-slate-200">
-          <Image
-            {...image}
-            className="object-contain aspect-auto"
-          />
+          <Image {...image} className="object-contain aspect-auto" />
         </div>
         <span className="font-medium text-sm text-gray-700 capitalize">
           {name}
