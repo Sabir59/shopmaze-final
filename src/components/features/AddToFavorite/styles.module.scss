@@ -1,0 +1,8 @@
+// AddToFavorite.scss
+.addToFavorite {
+  @apply cursor-pointer;
+
+  &__icon {
+    @apply text-gray-600 h-5 w-5;
+  }
+}

@@ -1,0 +1,23 @@
+.navbar {
+  @apply py-4;
+
+  &__container {
+    @apply flex items-center justify-between gap-8;
+  }
+  &__logo {
+    @apply object-contain max-h-7 aspect-auto;
+  }
+
+  &__search {
+    @apply flex-1;
+  }
+}
+
+// UserActions.scss
+.userActions {
+  @apply cursor-pointer;
+
+  &__icon {
+    @apply text-gray-600 h-5 w-5;
+  }
+}

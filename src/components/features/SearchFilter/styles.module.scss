@@ -1,0 +1,12 @@
+// SearchFilter.scss
+.searchFilter {
+  @apply relative;
+
+  &__input {
+    @apply w-full pl-10;
+  }
+
+  &__icon {
+    @apply text-gray-500 absolute left-3 top-1/2 -translate-y-1/2;
+  }
+}
