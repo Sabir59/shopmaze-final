@@ -11,6 +11,12 @@ export const images = {
     width: 90,
     height: 22.12,
   },
+  footerBgImage: {
+    src: "/images/image-bg-footer.png",
+    alt: "footer bg",
+    width: 1440,
+    height: 562,
+  },
   megaMenuSmartPhone: {
     src: "/images/mega-menu/image-smartphone.png",
     alt: "Smartphones category",

@@ -3,7 +3,7 @@
   @apply relative;
 
   &__input {
-    @apply w-full pl-10;
+    @apply w-full pl-10 focus-visible:ring-0 focus-visible:ring-offset-0;
   }
 
   &__icon {
