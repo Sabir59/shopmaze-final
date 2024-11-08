@@ -1,0 +1,15 @@
+.socialFollow {
+  @apply flex items-center gap-3;
+  &__title {
+    @apply font-medium text-white;
+  }
+  &__list {
+    @apply flex items-center gap-3;
+  }
+  &__item {
+    @apply size-8 cursor-pointer;
+  }
+  &__icon {
+    @apply size-6 text-white;
+  }
+}

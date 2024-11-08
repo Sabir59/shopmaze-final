@@ -1,0 +1,13 @@
+.categoryCard{
+    @apply flex flex-col items-center gap-2 w-32 h-32;
+
+    &__thumbnail{
+        @apply p-2 flex justify-center items-center rounded-lg bg-slate-200;
+    }
+    &__image{
+        @apply object-contain aspect-auto;
+    }
+    &__name{
+        @apply font-medium text-sm text-gray-700 capitalize;
+    }
+}

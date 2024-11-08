@@ -2,23 +2,28 @@ import { Input } from "@/components/ui/input";
 import { Send } from "lucide-react";
 import React from "react";
 
+import styles from "./styles.module.scss";
+import createScn from "@/lib/utils";
+
+const scn = createScn(styles);
+
 export const NewsLetter = () => {
   return (
-    <div className=" sm:max-w-4xl mx-auto rounded-xl bg-teal-900 py-3 px-5 flex flex-col sm:flex-row justify-between sm:items-center gap-3 sm:gap-12">
+    <div className={scn("newsletter")}>
       {/* Left */}
-      <div className="flex flex-col gap-1">
-        <span className="text-xl font-semibold text-white">News Letter</span>
-        <span className="text-sm text-gray-200">
+      <div className={scn("newsletter__left")}>
+        <span className={scn("newsletter__title")}>News Letter</span>
+        <span className={scn("newsletter__description")}>
           Subscribe to our newsletter
         </span>
       </div>
       {/* Right */}
-      <div className="relative w-full flex-1 md:flex-[0_0_300px] border-b">
+      <div className={scn("newsletter__right")}>
         <Input
           placeholder="youremail@example.com"
-          className="border-none rounded-none focus-visible:ring-0 focus-visible:ring-offset-0 bg-transparent w-[calc(100%-2rem)] placeholder:text-gray-300 pl-0"
+          className={scn("newsletter__input")}
         />
-        <Send className="size-5 absolute top-1/2 -translate-y-1/2 right-2 text-white cursor-pointer" />
+        <Send className={scn("newsletter__send")} />
       </div>
     </div>
   );

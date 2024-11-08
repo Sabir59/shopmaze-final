@@ -1,19 +1,37 @@
 .footer {
-  @apply bg-teal-900 py-12 text-white;
+  @apply pb-12 relative;
 
+  &__bgImage {
+    @apply w-full h-full absolute left-0 top-0 z-0 object-cover object-top;
+  }
+  &__container {
+    @apply relative z-10 -translate-y-1/2 mt-12;
+  }
   &__content {
-    @apply flex flex-wrap gap-12 justify-between;
+    @apply relative z-10;
+  }
+  &__left {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7 md:gap-12;
   }
   &__list {
-    @apply flex flex-col gap-3 md:max-w-80;
+    @apply flex flex-col gap-3 text-white text-sm;
   }
-  &__listItem {
-    @apply font-medium mb-5 block text-gray-200;
-  }
-  &__title {
-    @apply font-medium mb-5 block text-gray-200;
+  &__item {
+    @apply flex flex-col gap-5;
   }
   &__link {
-    @apply font-light text-sm text-gray-300;
+    @apply font-medium text-white flex items-center gap-[6px];
+  }
+  &__categoryLink {
+    @apply flex items-center capitalize gap-1 translate-x-3 transition-all duration-300 ease-in-out;
+  }
+  &__description {
+    @apply flex flex-col gap-2;
+  }
+  &__descriptionTitle {
+    @apply font-medium text-white;
+  }
+  &__descriptionText {
+    @apply text-gray-300 text-sm;
   }
 }

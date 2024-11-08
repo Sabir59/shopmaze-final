@@ -17,6 +17,12 @@ export const images = {
     width: 1440,
     height: 562,
   },
+  logoFooterWhite: {
+    src: "/images/logos/logo-shopmaze-footer.png",
+    alt: "Logo",
+    width: 72,
+    height: 72,
+  },
   megaMenuSmartPhone: {
     src: "/images/mega-menu/image-smartphone.png",
     alt: "Smartphones category",
@@ -89,6 +95,20 @@ export const images = {
     alt: "Gaming category",
     width: 100,
     height: 100,
+  },
+
+  // Slider Widget
+  appleLogoImage: {
+    src: "/images/widgets/image-brand-apple-pick.png",
+    alt: "Apple",
+    width: 62,
+    height: 62,
+  },
+  appleBrandImage: {
+    src: "/images/widgets/image-brand-iphone-pick.png",
+    alt: "Apple",
+    width: 100,
+    height: 180,
   },
 
   // ProductCard Images
