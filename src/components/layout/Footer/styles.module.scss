@@ -1,0 +1,37 @@
+.footer {
+  @apply pb-12 relative;
+
+  &__bgImage {
+    @apply w-full h-full absolute left-0 top-0 z-0 object-cover object-top;
+  }
+  &__container {
+    @apply relative z-10 -translate-y-1/2 mt-12;
+  }
+  &__content {
+    @apply relative z-10;
+  }
+  &__left {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7 md:gap-12;
+  }
+  &__list {
+    @apply flex flex-col gap-3 text-white text-sm;
+  }
+  &__item {
+    @apply flex flex-col gap-5;
+  }
+  &__link {
+    @apply font-medium text-white flex items-center gap-[6px];
+  }
+  &__categoryLink {
+    @apply flex items-center capitalize gap-1 translate-x-3 transition-all duration-300 ease-in-out;
+  }
+  &__description {
+    @apply flex flex-col gap-2;
+  }
+  &__descriptionTitle {
+    @apply font-medium text-white;
+  }
+  &__descriptionText {
+    @apply text-gray-300 text-sm;
+  }
+}

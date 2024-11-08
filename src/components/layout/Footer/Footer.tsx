@@ -1,172 +1,186 @@
 import { MaxWidthWrapper } from "@/components/hoc";
+import createScn from "@/lib/utils";
 import Link from "next/link";
 import React from "react";
 
+import styles from "./styles.module.scss";
+import Image from "next/image";
+import {
+  ChevronRight,
+  Facebook,
+  Mail,
+  MailIcon,
+  Map,
+  Phone,
+  PhoneCall,
+  Send,
+  Twitter,
+  Youtube,
+} from "lucide-react";
+import { NewsLetter, SocialFollow } from "@/components/widgets";
+import { images } from "@/constants/images";
+
+const scn = createScn(styles);
+
+const footerData = [
+  {
+    icon: Facebook,
+    href: "https://twitter.com",
+  },
+  {
+    icon: Twitter,
+    href: "https://mail.com",
+  },
+  {
+    icon: Youtube,
+    href: "https://phone.com",
+  },
+];
+
 export const Footer = () => {
   return (
-    <footer className="bg-teal-900 py-12 text-white">
-      <MaxWidthWrapper className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 ">
-        <ul className="flex flex-col gap-3">
-          <li>
-            <span className="font-medium mb-5 block text-gray-200">
-              Shop<span>Maze</span>
-            </span>
-          </li>
-          <li>
-            <span className="font-medium mb-5 block text-gray-200">
-              Contact us
-            </span>
-          </li>
-        </ul>
-        <ul className="flex flex-col gap-3">
-          <li>
-            <span className="font-medium mb-5 block text-gray-200">
-              Programming Languages
-            </span>
-          </li>
-          <li>
-            <Link href="#" className="font-light text-sm text-gray-300">
-              JavaScript
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className="font-light text-sm text-gray-300">
-              Python
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className="font-light text-sm text-gray-300">
-              Java
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className="font-light text-sm text-gray-300">
-              C++
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className="font-light text-sm text-gray-300">
-              Ruby
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className="font-light text-sm text-gray-300">
-              Swift
-            </Link>
-          </li>
-        </ul>
-        <ul className="flex flex-col gap-3">
-          <li>
-            <span className="font-medium mb-5 block text-gray-200">
-              Business & Finance
-            </span>
-          </li>
-          <li>
-            <Link href="#" className="font-light text-sm text-gray-300">
-              Entrepreneurship
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className="font-light text-sm text-gray-300">
-              Project Management
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className="font-light text-sm text-gray-300">
-              Finance Basics
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className="font-light text-sm text-gray-300">
-              Investing
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className="font-light text-sm text-gray-300">
-              Sales Techniques
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className="font-light text-sm text-gray-300">
-              Business Strategy
-            </Link>
-          </li>
-        </ul>
-        <ul className="flex flex-col gap-3">
-          <li>
-            <span className="font-medium mb-5 block text-gray-200">
-              Health & Wellness
-            </span>
-          </li>
-          <li>
-            <Link href="#" className="font-light text-sm text-gray-300">
-              Nutrition
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className="font-light text-sm text-gray-300">
-              Yoga & Meditation
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className="font-light text-sm text-gray-300">
-              Mental Health
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className="font-light text-sm text-gray-300">
-              Fitness
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className="font-light text-sm text-gray-300">
-              Stress Management
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className="font-light text-sm text-gray-300">
-              Sleep Science
-            </Link>
-          </li>
-        </ul>
-        <ul className="flex flex-col gap-3">
-          <li>
-            <span className="font-medium mb-5 block text-gray-200">
-              Creative Arts
-            </span>
-          </li>
-          <li>
-            <Link href="#" className="font-light text-sm text-gray-300">
-              Photography
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className="font-light text-sm text-gray-300">
-              Drawing & Painting
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className="font-light text-sm text-gray-300">
-              Music Production
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className="font-light text-sm text-gray-300">
-              Film Making
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className="font-light text-sm text-gray-300">
-              Writing Skills
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className="font-light text-sm text-gray-300">
-              Public Speaking
-            </Link>
-          </li>
-        </ul>
+    <footer className="pb-12 relative bg-blue-600">
+      {/* <Image
+        {...images.footerBgImage}
+        className="w-full h-full absolute left-0 top-0 z-0 object-cover object-top"
+      /> */}
+      <MaxWidthWrapper className="relative z-10 -translate-y-1/2 mt-12">
+        <NewsLetter />
       </MaxWidthWrapper>
+      <div className="relative">
+        <MaxWidthWrapper className="relative z-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7 md:gap-12">
+            <ul className="flex flex-col gap-3 text-white text-sm">
+              <li className="flex flex-col gap-5">
+                <Image {...images.logoFooterWhite} />
+                <div className="flex flex-col gap-2">
+                  <span className="font-medium text-white">
+                    @2024 shopmaze use.
+                  </span>
+                  <span className="text-gray-300 text-sm">
+                    Leading supplier of premium electronics at unbeatable prices
+                  </span>
+                </div>
+              </li>
+              <li className="flex flex-col gap-6 mt-6 md:mt-12">
+                <div className="flex flex-col gap-1">
+                  <Link
+                    href="#"
+                    className="font-medium text-white flex items-center gap-[6px]"
+                  >
+                    <Phone className="size-4" />
+                    +92-305-3971103
+                  </Link>
+                  <Link
+                    href="#"
+                    className="font-medium text-white flex items-center gap-[6px]"
+                  >
+                    <MailIcon className="size-4" />
+                    shopmaze@support.com
+                  </Link>
+                </div>
+              </li>
+            </ul>
+            <ul className="flex flex-col gap-3 text-white text-sm">
+              <li>
+                <span className="text-lg font-semibold uppercase  md:mb-5 block">
+                  categories
+                </span>
+              </li>
+              <li className="flex items-center capitalize gap-1 translate-x-3 transition-all duration-300 ease-in-out">
+                <ChevronRight className="size-4 text-gray-300" />
+                <Link href="#">Phones</Link>
+              </li>
+              <li className="flex items-center capitalize gap-1 translate-x-3 transition-all duration-300 ease-in-out">
+                <ChevronRight className="size-4 text-gray-300" />
+                <Link href="#">Laptops</Link>
+              </li>
+              <li className="flex items-center capitalize gap-1 translate-x-3 transition-all duration-300 ease-in-out">
+                <ChevronRight className="size-4 text-gray-300" />
+                <Link href="#">Smart Watches</Link>
+              </li>
+              <li className="flex items-center capitalize gap-1 translate-x-3 transition-all duration-300 ease-in-out">
+                <ChevronRight className="size-4 text-gray-300" />
+                <Link href="#">Cameras</Link>
+              </li>
+              <li className="flex items-center capitalize gap-1 translate-x-3 transition-all duration-300 ease-in-out">
+                <ChevronRight className="size-4 text-gray-300" />
+                <Link href="#">Headphones</Link>
+              </li>
+              <li className="flex items-center capitalize gap-1 translate-x-3 transition-all duration-300 ease-in-out">
+                <ChevronRight className="size-4 text-gray-300" />
+                <Link href="#">Gaming</Link>
+              </li>
+            </ul>
+            <ul className="flex flex-col gap-3 text-white text-sm">
+              <li>
+                <span className="text-lg font-semibold uppercase  md:mb-5 block">
+                  our company
+                </span>
+              </li>
+              <li className="flex items-center capitalize gap-1 translate-x-3 transition-all duration-300 ease-in-out">
+                <ChevronRight className="size-4 text-gray-300" />
+                <Link href="#">Overview</Link>
+              </li>
+              <li className="flex items-center capitalize gap-1 translate-x-3 transition-all duration-300 ease-in-out">
+                <ChevronRight className="size-4 text-gray-300" />
+                <Link href="#">careers</Link>
+              </li>
+              <li className="flex items-center capitalize gap-1 translate-x-3 transition-all duration-300 ease-in-out">
+                <ChevronRight className="size-4 text-gray-300" />
+                <Link href="#">Partners</Link>
+              </li>
+              <li className="flex items-center capitalize gap-1 translate-x-3 transition-all duration-300 ease-in-out">
+                <ChevronRight className="size-4 text-gray-300" />
+                <Link href="#">Affiliates</Link>
+              </li>
+            </ul>
+            <ul className="flex flex-col gap-3 text-white text-sm">
+              <li>
+                <span className="text-lg font-semibold uppercase  md:mb-5 block">
+                  blogs
+                </span>
+              </li>
+              <li className="flex items-center capitalize gap-1 translate-x-3 transition-all duration-300 ease-in-out">
+                <ChevronRight className="size-4 text-gray-300" />
+                <Link href="#">Top 10 smartphones of 2024</Link>
+              </li>
+              <li className="flex items-center capitalize gap-1 translate-x-3 transition-all duration-300 ease-in-out">
+                <ChevronRight className="size-4 text-gray-300" />
+                <Link href="#">
+                  How to Choose the Perfect Laptop for Work and Play
+                </Link>
+              </li>
+              <li className="flex items-center capitalize gap-1 translate-x-3 transition-all duration-300 ease-in-out">
+                <ChevronRight className="size-4 text-gray-300" />
+                <Link href="#">
+                  Beginner’s Guide to Photography with DSLR Cameras
+                </Link>
+              </li>
+            </ul>
+          </div>
+          {/* Footer bottom */}
+          <div className="flex flex-col md:flex-row gap-3 items-center justify-between py-3 mt-14 border-t border-teal-700">
+            <div className="text-white text-sm flex items-center gap-3">
+              <Link href="#">Privacy Policy</Link>
+              <span>-</span>
+              <Link href="#">Terms & Conditions</Link>
+            </div>
+            <SocialFollow title="Follow us:" list={footerData} />
+          </div>
+          <div className="flex flex-col md:flex-row gap-3 items-center justify-between py-3 mt-3 border-t border-teal-700">
+            <span className="text-sm text-white">
+              @2024 ShopMaze. All rights reserved.
+            </span>
+            <span className="text-white text-sm">
+              Website Designed by{" "}
+              <span className="text-orange-600 font-medium">
+                codecalm@support.com
+              </span>
+            </span>
+          </div>
+        </MaxWidthWrapper>
+      </div>
     </footer>
   );
 };

@@ -10,6 +10,7 @@ import { megaMenuHome } from "@/seeds/megaMenuHome";
 import { productCardSeeds } from "@/seeds/productCard";
 import { MaxWidthWrapper } from "@/components/hoc";
 import { ProductCard } from "@/components/widgets";
+import TrendingProducts from "./__sections/trendingProducts";
 
 export default function Home() {
   return (
@@ -31,20 +32,18 @@ export default function Home() {
               <div className="flex flex-col justify-end gap-4">
                 <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-center">
                   {productCardSeeds.map(
-                    (
-                      {
-                        name,
-                        description,
-                        reviews,
-                        price,
-                        link,
-                        image,
-                        affiliateLinks,
-                      },
-                      index
-                    ) => (
+                    ({
+                      id,
+                      name,
+                      description,
+                      reviews,
+                      price,
+                      link,
+                      image,
+                      affiliateLinks,
+                    }) => (
                       <ProductCard
-                        key={index}
+                        key={id}
                         name={name}
                         description={description}
                         price={price}
@@ -58,6 +57,9 @@ export default function Home() {
                 </div>
               </div>
             </MaxWidthWrapper>
+          </section>
+          <section>
+            <TrendingProducts />
           </section>
         </div>
       </section>

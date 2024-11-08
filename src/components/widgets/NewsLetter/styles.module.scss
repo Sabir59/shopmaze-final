@@ -1,0 +1,22 @@
+.newsletter {
+  @apply sm:max-w-4xl mx-auto rounded-xl bg-teal-950 py-3 px-5 flex flex-col sm:flex-row justify-between sm:items-center gap-3 sm:gap-12;
+
+  &__left {
+    @apply flex flex-col gap-1;
+  }
+  &__right {
+    @apply relative w-full flex-1 md:flex-[0_0_300px] border-b;
+  }
+  &__title {
+    @apply text-xl font-semibold text-white;
+  }
+  &__description {
+    @apply text-sm text-gray-200;
+  }
+  &__input {
+    @apply border-none rounded-none focus-visible:ring-0 focus-visible:ring-offset-0 bg-transparent w-[calc(100%-2rem)] placeholder:text-gray-300 pl-0;
+  }
+  &__send {
+    @apply size-5 absolute top-1/2 -translate-y-1/2 right-2 text-white cursor-pointer;
+  }
+}

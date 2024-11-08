@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans, Poppins } from "next/font/google";
 import "./globals.css";
 
-const poppins = DM_Sans({
+const poppins = Poppins({
   weight: ["200", "300", "400", "500", "600", "700"],
   style: ["normal", "italic"],
   subsets: ["latin"],

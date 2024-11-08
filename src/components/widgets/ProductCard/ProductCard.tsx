@@ -4,6 +4,11 @@ import { Heart, Star, StarHalf, Table } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { images } from "@/constants/images";
 
+import styles from "./styles.module.scss";
+import createScn from "@/lib/utils";
+
+const scn = createScn(styles);
+
 // Interface for AffiliateLink
 interface AffiliateLink {
   link: string;
@@ -36,61 +41,59 @@ export const ProductCard = ({
   affiliateLinks,
 }: ProductCardProps) => {
   return (
-    <div className="w-full max-w-full rounded-md relative bg-white border-t overflow-hidden transition-shadow ease-in-out duration-150 hover:shadow-lg cursor-pointer">
+    <div className={scn("productCard")}>
       {/* Header */}
-      <div className="absolute top-0 right-0 p-1 text-white text-sm bg-orange-500">
-        Lenovo
-      </div>
-      <div className="p-4 bg-white flex justify-center items-center">
-        <Image {...image} className="object-contain max-h-[160px]" />
+      <div className={scn("productCard__badge")}>Lenovo</div>
+      <div className={scn("productCard__thumbnail")}>
+        <Image {...image} className={scn("productCard__image")} />
       </div>
       {/* Body */}
-      <div className="p-4 flex flex-col gap-7">
-        <div className="border-b border-slate-300 pb-2">
-          <div className="flex gap-2 items-center justify-between border-b border-slate-300 pb-2">
-            <span className="text-gray-800 font-semibold">{name}</span>
-            <span className="text-gray-800 font-semibold text-sm">{price}</span>
+      <div className={scn("productCard__body")}>
+        <div className={scn("productCard__content")}>
+          <div className={scn("productCard__details")}>
+            <span className={scn("productCard__name")}>{name}</span>
+            <span className={scn("productCard__price")}>{price}</span>
           </div>
-          <p className="text-sm text-gray-600 mt-3">{description}</p>
+          <p className={scn("productCard__description")}>{description}</p>
           {/* Reviews */}
           {reviews && (
-            <div className="flex items-center gap-2 text-orange-500 mt-6">
-              <Star className="size-4" />
-              <Star className="size-4" />
-              <Star className="size-4" />
-              <Star className="size-4" />
-              <StarHalf className="size-4" />
-              <span className="text-gray-600 font-medium text-sm">
+            <div className={scn("productCard__reviews")}>
+              <Star className={scn("productCard__star")} />
+              <Star className={scn("productCard__star")} />
+              <Star className={scn("productCard__star")} />
+              <Star className={scn("productCard__star")} />
+              <StarHalf className={scn("productCard__star")} />
+              <span className={scn("productCard__reviewsCount")}>
                 ({reviews})
               </span>
             </div>
           )}
         </div>
         {/* Bottom */}
-        <div className="flex flex-col gap-6">
+        <div className={scn("productCard__footer")}>
           {affiliateLinks.length > 1 && (
-            <div className="flex flex-col gap-4">
-              <div className="flex items-center justify-between gap-2">
-                <span className="text-sm text-gray-600 font-medium">
+            <div className={scn("productCard__affiliates")}>
+              <div className={scn("productCard__affiliatesHeader")}>
+                <span className={scn("productCard__affiliatesTitle")}>
                   Available in
                 </span>
                 <Button
                   variant="outline"
                   size="sm"
-                  className="flex items-center gap-1"
+                  className={scn("productCard__affiliatesButton")}
                 >
                   Compare
-                  <Table className="size-4 text-gray-600" />
+                  <Table className={scn("productCard__affiliatesIcon")} size={16} />
                 </Button>
               </div>
-              <ul className="flex items-center gap-4">
+              <ul className={scn("productCard__affiliatesList")}>
                 <li>
                   <Image
                     src="/images/logos/logo-amazon.png"
                     alt="egghead"
                     width={36}
                     height={18}
-                    className="object-contain h-[18px]"
+                    className={scn("productCard__affiliatesImage")}
                   />
                 </li>
                 <li>
@@ -99,7 +102,7 @@ export const ProductCard = ({
                     alt="egghead"
                     width={36}
                     height={18}
-                    className="object-contain h-[18px]"
+                   className={scn("productCard__affiliatesImage")}
                   />
                 </li>
                 <li>
@@ -108,21 +111,21 @@ export const ProductCard = ({
                     alt="egghead"
                     width={36}
                     height={18}
-                    className="object-contain h-[18px]"
+                   className={scn("productCard__affiliatesImage")}
                   />
                 </li>
               </ul>
             </div>
           )}
-          <div className="flex items-center justify-between gap-4">
-            <Button className="w-full flex-1 flex items-center gap-2 bg-teal-800 hover:bg-teal-600">
+          <div className={scn("productCard__buttonGroup")}>
+            <Button className={scn("productCard__button")}>
               Buy Now
               <Image
                 {...images.logoAmazonWhite}
-                className="object-contain h-[18px] aspect-auto"
+                className={scn("productCard__buttonIcon")}
               />
             </Button>
-            <div className="h-9 w-9 rounded-full border flex items-center justify-center">
+            <div className={scn("productCard__heart")}>
               <Heart />
             </div>
           </div>

@@ -1,7 +1,10 @@
 import { images } from "@/constants/images";
+import { v4 as uuidv4 } from "uuid";
+
 
 export const productCardSeeds = [
   {
+    id: uuidv4(),
     name: "Smartphone X1",
     description:
       "A powerful smartphone with a sleek design and long battery life.",
@@ -21,6 +24,7 @@ export const productCardSeeds = [
     ],
   },
   {
+    id: uuidv4(),
     name: "Galaxy M13 (4GB | 64 GB )",
     description:
       "A powerful smartphone with a sleek design and long battery life.",
@@ -40,6 +44,7 @@ export const productCardSeeds = [
     ],
   },
   {
+    id: uuidv4(),
     name: "Smartphone X1",
     description:
       "A powerful smartphone with a sleek design and long battery life.",
@@ -59,6 +64,7 @@ export const productCardSeeds = [
     ],
   },
   {
+    id: uuidv4(),
     name: "Smartphone X1",
     description:
       "A powerful smartphone with a sleek design and long battery life.",
@@ -78,6 +84,7 @@ export const productCardSeeds = [
     ],
   },
   {
+    id: uuidv4(),
     name: "Smartphone X1",
     description:
       "A powerful smartphone with a sleek design and long battery life.",
@@ -97,6 +104,7 @@ export const productCardSeeds = [
     ],
   },
   {
+    id: uuidv4(),
     name: "Smartphone X1",
     description:
       "A powerful smartphone with a sleek design and long battery life.",
@@ -116,6 +124,7 @@ export const productCardSeeds = [
     ],
   },
   {
+    id: uuidv4(),
     name: "Smartphone X1",
     description:
       "A powerful smartphone with a sleek design and long battery life.",
@@ -135,6 +144,7 @@ export const productCardSeeds = [
     ],
   },
   {
+    id: uuidv4(),
     name: "Smartphone X1",
     description:
       "A powerful smartphone with a sleek design and long battery life.",
@@ -154,6 +164,7 @@ export const productCardSeeds = [
     ],
   },
   {
+    id: uuidv4(),
     name: "Smartphone X1",
     description:
       "A powerful smartphone with a sleek design and long battery life.",
@@ -173,6 +184,7 @@ export const productCardSeeds = [
     ],
   },
   {
+    id: uuidv4(),
     name: "Smartphone X1",
     description:
       "A powerful smartphone with a sleek design and long battery life.",
@@ -192,6 +204,7 @@ export const productCardSeeds = [
     ],
   },
   {
+    id: uuidv4(),
     name: "Smartphone X1",
     description:
       "A powerful smartphone with a sleek design and long battery life.",
@@ -211,6 +224,7 @@ export const productCardSeeds = [
     ],
   },
   {
+    id: uuidv4(),
     name: "Smartphone X1",
     description:
       "A powerful smartphone with a sleek design and long battery life.",
